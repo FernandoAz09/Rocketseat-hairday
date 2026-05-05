@@ -12,7 +12,6 @@ export function SchedulePeriod({
   periodText,
   periodHours,
   children,
-  className,
   ...props
 }: PeriodProps) {
   return (

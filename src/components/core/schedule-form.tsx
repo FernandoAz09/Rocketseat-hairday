@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useScheduleHours } from "../../hooks/useScheduleHours";
 import { useScheduleForm } from "../../hooks/useScheduleForm";
 
@@ -19,7 +19,8 @@ export function ScheduleForm() {
   const [date, setDate] = useState(TODAY)
   const [time, setTime] = useState("")
   const [customer, setCustomer] = useState("")
-  const [isDisabled, setIsDisabled] = useState(true);
+
+  const isDisabled = !date || !time || !customer;
 
   const { createSchedule, schedules } = useScheduleForm()
   const { opening } = useScheduleHours(date, schedules)
@@ -36,14 +37,6 @@ export function ScheduleForm() {
     setCustomer("")
     setTime("")
   }
-
-  useEffect(() => {
-    if(date && time && customer) {
-      setIsDisabled(false);
-    } else {
-      setIsDisabled(true);
-    }
-  }, [date, time, customer])
 
   return (
     <form onSubmit={handleCreateSchedule}>
@@ -67,7 +60,7 @@ export function ScheduleForm() {
             <ul className="flex gap-2 flex-wrap mt-2">
               {opening.map(({ hour, scheduleHour, hourAvailable }) => hour <= "12:00" && (
                 <li key={hour}>
-                  <TimeSelect 
+                  <TimeSelect
                     id={hour}
                     label={hour}
                     value={scheduleHour}
@@ -86,12 +79,12 @@ export function ScheduleForm() {
             <ul className="flex gap-2 flex-wrap mt-2">
               {opening.map(({ hour, scheduleHour, hourAvailable }) => hour > "12:00" && hour <= "18:00" && (
                 <li key={hour}>
-                  <TimeSelect 
+                  <TimeSelect
                     id={hour}
                     label={hour}
                     value={scheduleHour}
                     onChange={(e) => setTime(e.target.value)}
-                    checked={time === scheduleHour}              
+                    checked={time === scheduleHour}
                     disabled={hourAvailable}
                   />
                 </li>
@@ -105,10 +98,10 @@ export function ScheduleForm() {
             <ul className="flex gap-2 flex-wrap mt-2">
               {opening.map(({ hour, scheduleHour, hourAvailable }) => hour > "18:00" && hour <= "21:00" && (
                 <li key={hour}>
-                  <TimeSelect 
+                  <TimeSelect
                     id={hour}
                     label={hour}
-                    value={scheduleHour}                    
+                    value={scheduleHour}
                     onChange={(e) => setTime(e.target.value)}
                     checked={time === scheduleHour}
                     disabled={hourAvailable}
