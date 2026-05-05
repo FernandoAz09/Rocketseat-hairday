@@ -1,70 +1,91 @@
 ![HairDay Logo](./src/assets/images/logo.svg)
 
-Uma plataforma de administrador para agendamento de cortes de cabelo.
+# 💈 HairDay
+
+Uma plataforma web para gerenciamento e agendamento de cortes de cabelo.
 
 ![preview](.github/preview.png)
 
-> Formação React: Criando primeiro projeto com tooling (Desafio prático).
+> 🚀 Projeto didático desenvolvido durante a formação da Rocketseat (Desafio prático).
 
-<br>
+---
 
-## 📋 Descrição
+## 📋 Sobre o projeto
 
-O HairDay é uma aplicação web que permite agendar horários para cortes de cabelo de forma simples e eficiente.
+O **HairDay** é uma aplicação web criada com foco educacional, que simula um sistema de agendamento para barbearias ou salões de beleza. A proposta é oferecer uma experiência simples, rápida e eficiente tanto para o administrador quanto para o controle dos horários disponíveis.
 
-<br>
+---
 
 ## ✨ Funcionalidades
 
-- **Agendamento de Horários**: Permite selecionar datas e horários disponíveis para agendar cortes de cabelo.
-- **Visualização de Agenda**: Exibe uma agenda com os agendamentos marcados.
-- **Formulário de Agendamento**: Interface intuitiva para inserir nome do cliente e confirmar o agendamento.
-- **Horários de Funcionamento**: Suporte a horários de abertura de 09:00 às 21:00.
-- **Armazenamento Local**: Utiliza localStorage para persistir os agendamentos no navegador.
-- **Design Responsivo**: Interface adaptável para desktop e dispositivos móveis.
+* 📅 **Agendamento de horários**
+  Selecione datas e horários disponíveis para novos atendimentos.
 
-<br>
+* 📊 **Visualização da agenda**
+  Consulte facilmente todos os agendamentos realizados.
 
-## 🛠️ Tecnologias Utilizadas
+* 📝 **Formulário de agendamento**
+  Interface simples para cadastrar o nome do cliente e confirmar o horário.
 
-- **Frontend**: React 19 com TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Date Handling**: Day.js
-- **Icons**: SVGs com Vite Plugin SVGR
-- **State Management**: Hooks customizados para gerenciamento de estado
+* 🕘 **Controle de funcionamento**
+  Horários disponíveis das **09:00 às 21:00**.
 
-<br>
+* 💾 **Persistência local**
+  Os dados são armazenados no navegador utilizando **localStorage**.
 
-## 🚀 Instalação e Execução
+* 📱 **Design responsivo**
+  Interface adaptada para desktop e dispositivos móveis.
 
-### Pré-requisitos
+---
 
-- Node.js (versão 18 ou superior)
-- npm ou yarn
+## 🛠️ Tecnologias utilizadas
 
-### Passos para Instalação
+* **React 19 + TypeScript**
+* **Vite**
+* **Tailwind CSS**
+* **Day.js**
+* **SVGR (SVG como componente React)**
+* **Hooks customizados para gerenciamento de estado**
 
-1. **Clone o repositório**:
+---
 
-   ```bash
-   git clone https://github.com/FernandoCyber3/HairDay
-   cd HairDay
-   ```
+## 🚀 Como executar o projeto
 
-2. **Instale as dependências**:
+### 📌 Pré-requisitos
 
-   ```bash
-   npm install
-   ```
+* Node.js (versão 18 ou superior)
+* npm ou yarn
 
-3. **Execute o projeto em modo de desenvolvimento**:
+### ⚙️ Instalação
 
-   ```bash
-   npm run dev
-   ```
+1. Clone o repositório:
 
-4. **Acesse a aplicação**:
-   Abra o navegador e vá para `http://localhost:5173` (porta padrão do Vite).
+```bash
+git clone https://github.com/FernandoCyber3/HairDay
+cd HairDay
+```
 
+2. Instale as dependências:
 
+```bash
+npm install
+```
+
+3. Execute o projeto:
+
+```bash
+npm run dev
+```
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por:
+👉 https://github.com/FernandoAz09
+
+---
+
+## 📚 Observações
+
+Este projeto tem fins exclusivamente **didáticos**, sendo parte dos estudos na formação da **Rocketseat**, com foco em práticas modernas de desenvolvimento frontend utilizando React e ferramentas do ecossistema atual.
