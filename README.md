@@ -61,8 +61,8 @@ O **HairDay** é uma aplicação web criada com foco educacional, que simula um 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/FernandoCyber3/HairDay
-cd HairDay
+git clone https://github.com/FernandoAz09/Rocketseat-hairday
+cd Rocketseat-hairday
 ```
 
 2. Instale as dependências:
